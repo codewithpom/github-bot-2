@@ -5,7 +5,7 @@ import webserver
 
 client = commands.Bot(command_prefix="?")
 
-token = "ODYxMTQ2NjIxNTc5MTAwMTkw.YOFjSQ.3miQ2OgRY7QvzAziRLilMpH1H3E"
+token = "token"
 
 @client.event
 async def on_ready():
