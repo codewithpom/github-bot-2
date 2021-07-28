@@ -56,9 +56,14 @@ def search(query: str):
         try:
             des = i.find('p', class_="mb-1").text.strip()
         except Exception as e:
-            pass
+                des = "No description"
+            
         link_href = i.find('a')['href']
-        language = i.find('span', itemprop="programmingLanguage").text
+        try:
+                language = i.find('span', itemprop="programmingLanguage").text
+        except Exception:
+                language = ""
+                pass
         to_be_put = {'title': title, 'des': des, 'lang': language, 'href': link_href}
         finished_data.append(to_be_put)
     

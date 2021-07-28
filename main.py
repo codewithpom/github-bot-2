@@ -2,10 +2,10 @@ import discord
 import github_api
 from discord.ext import commands
 import webserver
-
+import os
 client = commands.Bot(command_prefix="?")
 
-token = "token"
+token = os.environ['token']
 
 @client.event
 async def on_ready():
